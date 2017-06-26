@@ -1,6 +1,6 @@
 
 total_distance = 1
-energy = 0
+energy = 5
 
 while total_distance < 20
 puts "Would you like to walk or run"
@@ -9,10 +9,15 @@ distance = gets.chomp
 
 if distance == "walk"
   total_distance += 1
+  energy += 1
 
 elsif distance == "run"
   total_distance += 5
+  energy -= 3
 
+elsif energy < 1
+  puts "GO HOME!"
+  
 elsif distance == "go home"
 puts "Great workout!"
 
