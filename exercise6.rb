@@ -1,27 +1,23 @@
 
-total_distance = walk + run
+total_distance = 1
 
-
+while total_distance < 20
 puts "Would you like to walk or run"
-total_distance = gets.to_i
+distance = gets.chomp
 
 
-if walk
+if distance == "walk"
   total_distance += 1
 
-else run
+elsif distance == "run"
   total_distance += 5
+
+
+
+puts "You are #{total_distance}km from home!"
+end 
+
 end
-
-walk = 1
-run = 5
-
-total_distance.each do |km|
-  puts " You are #{km}km from home!"
-end
-
-
-
 
 
 #
