@@ -1,5 +1,6 @@
 
 total_distance = 1
+energy = 0
 
 while total_distance < 20
 puts "Would you like to walk or run"
@@ -12,10 +13,11 @@ if distance == "walk"
 elsif distance == "run"
   total_distance += 5
 
+elsif distance == "go home"
+puts "Great workout!"
 
-
+end
 puts "You are #{total_distance}km from home!"
-end 
 
 end
 
