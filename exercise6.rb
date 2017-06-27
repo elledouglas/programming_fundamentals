@@ -3,26 +3,35 @@ total_distance = 1
 energy = 5
 
 while total_distance < 20
-puts "Would you like to walk or run"
-distance = gets.chomp
+puts "Would you like to walk or run?"
+exercise_choice = gets.chomp
 
-
-if distance == "walk"
+if exercise_choice == "walk"
   total_distance += 1
   energy += 1
+  puts "You are #{total_distance}km from home and have #{energy}lk of energy"
 
-elsif distance == "run"
-  total_distance += 5
-  energy -= 3
+elsif exercise_choice == "run"
+total_distance += 5
+energy -= 3
 
-elsif energy < 1
-  puts "GO HOME!"
-  
-elsif distance == "go home"
-puts "Great workout!"
+    if energy <= 0
+    puts "You do not have evergy to run. NOT GOOD!"
+  break
 
+
+  puts "You are #{total_distance}km from home and  #{energy} energy"
+
+    break
 end
-puts "You are #{total_distance}km from home!"
+
+
+
+elsif exercise_choice == "go home"
+puts "Great workout!"
+break
+end
+
 
 end
 
